@@ -46,12 +46,53 @@
             Console.WriteLine("Pozitív számok száma: " + pozitiv);
         }
 
+        static void Eldontes()
+        {
+            int i = 0;
+            while (i < tomb.Length && tomb[i] != 0)
+            {
+                i++;
+            }
+            if (i < tomb.Length)
+            {
+                Console.WriteLine("Van 0 a tömbben.");
 
+            }
+            else
+            {
+                Console.WriteLine("Nincs 0 a tömbben.");
 
+            }
+        }
 
+        static void Kereses()
+        {
+            int keresett = 0;
+            int i = 0;
+            while (i < tomb.Length && tomb[i] != keresett)
+            {
+                i++;
+            }
+            if (i < tomb.Length)
+            {
+                Console.WriteLine($"A keresett szám az {i}. indexben található.");
+            }
+            else
+            {
+                Console.WriteLine("A keresett szám nincs a tömbben.");
+            }
+        }
 
-
-
+        static void Kivalasztas()
+        {
+            tomb[8] = 10;
+            int i = 0;
+            while (tomb[i] != 10)
+            {
+                i++;
+            }
+            Console.WriteLine($"A keresett szám megtalálható az {i + 1}. helyen");
+        }
 
 
         static void Main(string[] args)
@@ -59,6 +100,10 @@
             Feltolt();
             Osszegzes();
             Megszamlalas();
+            Eldontes();
+            Kereses();
+            Kivalasztas();
+            
         }
     }
 }
